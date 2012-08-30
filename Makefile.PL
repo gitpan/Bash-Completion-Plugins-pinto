@@ -11,7 +11,12 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Bash completion for pinto",
   "AUTHOR" => "Steffen Schwigon <ss5\@renormalist.net>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "Bash::Completion::Request" => 0,
+    "Data::Dumper" => 0,
+    "Test::Deep" => 0,
+    "Test::More" => "0.88"
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -28,7 +33,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -2,11 +2,15 @@
 abstract: 'Bash completion for pinto'
 author:
   - 'Steffen Schwigon <ss5@renormalist.net>'
-build_requires: {}
+build_requires:
+  Bash::Completion::Request: 0
+  Data::Dumper: 0
+  Test::Deep: 0
+  Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,81 +29,81 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Bash-Completion-Plugins-pinto
   homepage: http://metacpan.org/release/Bash-Completion-Plugins-pinto
   repository: git://github.com/renormalist/Bash-Completion-Plugins-pinto.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@SCHWIGON/@Basic/GatherDir'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@SCHWIGON/@Basic/PruneCruft'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@SCHWIGON/@Basic/ManifestSkip'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@SCHWIGON/@Basic/MetaYAML'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::License
       name: '@SCHWIGON/@Basic/License'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::Readme
       name: '@SCHWIGON/@Basic/Readme'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::ExtraTests
       name: '@SCHWIGON/@Basic/ExtraTests'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@SCHWIGON/@Basic/ExecDir'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@SCHWIGON/@Basic/ShareDir'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::MakeMaker
       name: '@SCHWIGON/@Basic/MakeMaker'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@SCHWIGON/@Basic/Manifest'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@SCHWIGON/@Basic/TestRelease'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@SCHWIGON/@Basic/ConfirmRelease'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@SCHWIGON/@Basic/UploadToCPAN'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@SCHWIGON/MetaConfig'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@SCHWIGON/MetaJSON'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@SCHWIGON/PkgVersion'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@SCHWIGON/PodSyntaxTests'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::NoTabsTests
       name: '@SCHWIGON/NoTabsTests'
@@ -107,11 +111,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
       name: '@SCHWIGON/PodCoverageTests'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::MetaResources
       name: '@SCHWIGON/MetaResources'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::Authority
       name: '@SCHWIGON/Authority'
@@ -127,7 +131,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@SCHWIGON/AutoPrereqs'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::Git::Describe
       name: '@SCHWIGON/Git::Describe'
@@ -135,11 +139,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
       name: '@SCHWIGON/CheckChangesHasContent'
-      version: 0.005
+      version: 0.006
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@SCHWIGON/NextRelease'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
       name: '@SCHWIGON/Git::CheckFor::CorrectBranch'
@@ -171,34 +175,34 @@ x_Dist_Zilla:
           phase: runtime
           type: requires
       name: Prereqs
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 4.300020
+      version: 4.300021
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: 4.300020
+      version: 4.300021
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 4.300020
+    version: 4.300021
 x_authority: cpan:SCHWIGON
