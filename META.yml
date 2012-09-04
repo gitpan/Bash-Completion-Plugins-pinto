@@ -29,7 +29,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Bash-Completion-Plugins-pinto
   homepage: http://metacpan.org/release/Bash-Completion-Plugins-pinto
   repository: git://github.com/renormalist/Bash-Completion-Plugins-pinto.git
-version: 0.002
+version: 0.003
 x_Dist_Zilla:
   plugins:
     -

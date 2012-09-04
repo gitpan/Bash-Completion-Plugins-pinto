@@ -1,12 +1,12 @@
 ## no critic (RequireUseStrict)
 package Bash::Completion::Plugins::pinto;
-# git description: v0.001-4-g719eecf
+# git description: v0.002-1-g02cd2bc
 
 BEGIN {
   $Bash::Completion::Plugins::pinto::AUTHORITY = 'cpan:SCHWIGON';
 }
 {
-  $Bash::Completion::Plugins::pinto::VERSION = '0.002';
+  $Bash::Completion::Plugins::pinto::VERSION = '0.003';
 }
 # ABSTRACT: Bash completion for pinto
 
@@ -69,7 +69,7 @@ sub complete {
             shift @args; # get rid of 'pinto'
 
             # get rid of (-rFOO|-r FOO|--root FOO|--root=FOO)
-            if ($args[0] =~ qr/^(?:-r|--root)$/) {
+            if ($args[0] and $args[0] =~ qr/^(?:-r|--root)$/) {
                     if ($args[0] =~ qr/^(?:--root=)$/) {
                             shift @args;
                     } elsif ($args[1]) {
